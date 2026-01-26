@@ -1,0 +1,36 @@
+{
+  "ourProducts": "Our Products",
+  "hotOffers": "Hot Offers",
+  "signUp": "Sign Up",
+  "appName": "ShopCraft",
+  "signIn": "Sign In",
+  "email": "Email",
+  "password": "Password",
+  "forgotPassword": "Forgot Password?",
+  "error": "Something went wrong",
+  "loading": "Loading",
+  "success": "Success",
+  "warning": "Warning",
+  "info": "Info",
+  "logout": "Logout",
+  "home": "Home",
+  "profile": "Profile",
+  "settings": "Settings",
+  "aboutUs": "About Us",
+  "contactUs": "Contact Us",
+  "invalidCreditionals" : "Invalid Creditionals",
+  "firstName" : "First Name",
+  "lastName" : "Last Name",
+  "onlyLettersAndNumbersAllowed" : "Only letters and numbers are allowed",
+  "thisFieldIsrequired" : "This field is required",
+  "invalidEmailFormat" : "Invalid email format",
+  "onlyNumbersAreAllowed" : "Only numbers are allowed",
+  "minimumLenghtIs" : "Minimum length is",
+  "maximumLenghtIs" : "Maximum length is",
+  "invalidFormat" : "Invalid format",
+  "invalidValue" : "Invalid value"
+
+
+}
+
+
