@@ -1,5 +1,6 @@
 import 'package:ShopCraft/landing_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:go_router/go_router.dart';
@@ -182,6 +183,8 @@ final routerProvider = Provider<GoRouter>((ref) {
 });
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const ProviderScope(child: MyApp()));
 }
 

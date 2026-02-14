@@ -183,11 +183,12 @@ class _HoverCardState extends State<HoverCard> {
 
 
 class carouselCustom extends ConsumerStatefulWidget {
+
   const carouselCustom({super.key,
     required this.pagesList,
   });
 
-  final List<Map<String, String>> pagesList;
+  final List<Map<String, dynamic>> pagesList;
 
   @override
   ConsumerState<carouselCustom> createState() => _carouselCustomState();
@@ -247,9 +248,9 @@ class _carouselCustomState extends ConsumerState<carouselCustom> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  PositionedDirectional(
                     bottom: 16,
-                    left: 16,
+                    start: 16,
                     child: Text(
                       product['title']!,
                       style: TextStyle(
