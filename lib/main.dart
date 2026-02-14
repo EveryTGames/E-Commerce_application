@@ -65,7 +65,7 @@ final routerProvider = Provider<GoRouter>((ref) {
               children: [
                 Center(child: child),
                 PositionedDirectional(
-                  top: 10,
+                  top: 25,
                   start: 10,
                   child: state.uri.path!='/'
                       ?
@@ -79,7 +79,7 @@ final routerProvider = Provider<GoRouter>((ref) {
                 ),
                 PositionedDirectional( //theme mode
                   end: 8,
-                  top: 0,
+                  top: 25,
                   child: IconButton(
                     onPressed: () {
                       ref
@@ -97,7 +97,7 @@ final routerProvider = Provider<GoRouter>((ref) {
                 ),
                 PositionedDirectional( // language
                   end: 50,
-                  top: 0,
+                  top: 25,
                   child: Column(
                     children: [
                       IconButton(
@@ -183,8 +183,6 @@ final routerProvider = Provider<GoRouter>((ref) {
 });
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const ProviderScope(child: MyApp()));
 }
 

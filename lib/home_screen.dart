@@ -164,54 +164,60 @@ class HomeScreen extends ConsumerWidget {
                   ],
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              child:
+              Column(
                 children: [
-                  IconButton(
-                    onPressed: () {
-                      ref.read(authProvider.notifier).state = false;
-                    },
-                    icon: Icon(
-                      size: MediaQuery.of(context).size.width * 0.01 * 6,
-                      Icons.logout_outlined,
-                    ),
-                  ),
-                  Text(
-                    AppLocalizations.of(context)!.ourProducts,
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontSize: MediaQuery.of(context).size.width * 0.01 * 9,
-                    ),
-                  ),
+                  SizedBox(height: 25,),
                   Row(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       IconButton(
                         onPressed: () {
-                          ref
-                              .read(themeModeProvider.notifier)
-                              .state = themeMode == ThemeMode.light
-                              ? ThemeMode.dark
-                              : ThemeMode.light;
+                          ref.read(authProvider.notifier).state = false;
                         },
                         icon: Icon(
                           size: MediaQuery.of(context).size.width * 0.01 * 6,
-                          themeMode == ThemeMode.light
-                              ? Icons.dark_mode_outlined
-                              : Icons.light_mode_outlined,
+                          Icons.logout_outlined,
                         ),
                       ),
-                      IconButton(
-                        onPressed: () {
-                          ref
-                              .read(localProvider.notifier)
-                              .state = locale.languageCode == 'en'
-                              ? const Locale('ar')
-                              : const Locale('en');
-                        },
-                        icon: Icon(
-                          size: MediaQuery.of(context).size.width * 0.01 * 6,
-                          Icons.translate_outlined,
+                      Text(
+                        AppLocalizations.of(context)!.ourProducts,
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontSize: MediaQuery.of(context).size.width * 0.01 * 9,
                         ),
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              ref
+                                  .read(themeModeProvider.notifier)
+                                  .state = themeMode == ThemeMode.light
+                                  ? ThemeMode.dark
+                                  : ThemeMode.light;
+                            },
+                            icon: Icon(
+                              size: MediaQuery.of(context).size.width * 0.01 * 6,
+                              themeMode == ThemeMode.light
+                                  ? Icons.dark_mode_outlined
+                                  : Icons.light_mode_outlined,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              ref
+                                  .read(localProvider.notifier)
+                                  .state = locale.languageCode == 'en'
+                                  ? const Locale('ar')
+                                  : const Locale('en');
+                            },
+                            icon: Icon(
+                              size: MediaQuery.of(context).size.width * 0.01 * 6,
+                              Icons.translate_outlined,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
